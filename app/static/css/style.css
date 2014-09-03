@@ -1,0 +1,234 @@
+@font-face
+{
+    font-family: "HelvNeue";
+    src: url("HelvNeue.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* General settings */
+
+body
+{
+	font-family: 'HelvNeue',sans-serif;
+	font-weight: lighter;
+	font-style: normal;
+
+	color:#FFFFFF;
+
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+h1
+{
+	margin: 0;
+	padding: 0;
+}
+
+a 
+{ 
+	color:#FFFFFF; 
+	text-decoration: none; 
+}
+
+/*!
+ * Hover.css (http://ianlunn.co.uk/)
+ * Version: 1.0.8
+ * Author: Ian Lunn @IanLunn
+ * Author URL: http://ianlunn.co.uk/
+ * Github: https://github.com/IanLunn/Hover
+
+ * Made available under a MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+
+ * Hover.css Copyright Ian Lunn 2014.
+ */
+.grow {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.grow:hover, .grow:focus, .grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/********************** Landing page + header **********************/
+
+header
+{
+	background-image: url("../rsc/blur.png");
+	background-attachment: fixed;
+	background-position: center;
+
+	text-align: center;	
+	height: 1000px;
+}
+
+header h1
+{
+	font-size: 13.750em;
+	padding-top: 3%;
+}
+
+header h2
+{
+	font-size: 3.125em;
+	margin: 0 auto;
+
+	padding-top: 4%;
+	padding-bottom: 6%;
+}
+
+.header-button
+{
+	font-size:11.25em;
+
+	display: inline-block;
+	width: 20%;	
+}
+
+.header-desc
+{ 
+	font-size: 3.125em; 
+	display: inline-block;
+	width: 20%;
+}
+
+/******************** Settings for all the following boxes ********************/
+
+.box
+{
+	height: 900px;
+	width: 100%
+}
+
+.box h1
+{
+	font-size: 9.375em;
+	text-align: center;
+
+	padding-top: 1%;
+	padding-bottom:5%;
+}
+
+.box a:hover
+{ color:#DDDDDD; }
+
+.nav-button-up
+{
+	margin-left: 2%;
+	float:left;
+}
+
+.nav-button-down
+{
+	margin-right: 2%;
+	float:right;
+}
+
+.content
+{
+	float:left;
+	text-align: left;
+	font-size: 2.5em;
+	width:37%; 
+	padding-left: 2%;
+}
+
+.content p
+{
+	margin: 0;
+	width:80%;
+}
+
+.legend-y
+{ 
+	font-size:2.5em; 
+	width:5%;
+	float:left;
+	margin-right: 2%;
+	text-align: right;
+}
+
+.legend-x
+{ 
+	font-size:2.5em; 
+	float:left;
+	width:2%;
+	height:62%;
+	position: relative;
+}
+
+.legend-x-content
+{
+    position: absolute;
+    bottom: 0;
+}
+
+.chart
+{
+ width:48%;
+ float:left;
+}
+
+/********************  General overview div ********************/
+#overview-wrapper
+{ 
+    background-color:#FF4242;
+    text-align: center; 
+}
+
+/********************  Application A div ********************/
+#appA-wrapper
+{ background-color:#49D0FF; }
+
+/******************** Application B div ********************/
+#appB-wrapper
+{ background-color:#E57EF7; }
+
+/******************** Application C div ********************/
+#appC-wrapper
+{ background-color:#FF6B6B; }
+
+/******************** About div ********************/
+#about-wrapper
+{ background-color:#4ECDC4; }
+
+#about-content
+{
+	font-size: 2.5em;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/******************** Footer div + social bar ********************/
+
+#footer
+{
+	height: 500px;
+	background-color:#C7F464;
+}
+
+#social-bar
+{
+	padding-top:2%;
+	text-align: center;
+	font-size: 6.25em;
+}
+
+.social-button
+{ padding-right:5%; }
+
+
+/******************** Samples ********************/
+
+#samples
+{ display: none; }

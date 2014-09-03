@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="Non-intrusive Load Monitoring">
+	    <meta name="author" content="Peter Goldsborough">
+
+		<title>NILM</title>
+
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+		<link rel="stylesheet" type="text/css" href="../static/rsc/themify-icons.css">
+
+		<!-- Chart.js library -->
+		<script type="text/javascript" src="../static/js/Chart.js"></script>
+
+		<!-- JQuery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	</head>
+	<body>
+
+	<header id="header">
+
+		<h1>NILM</h1>
+		<h2>Non-intrusive Load Monitoring</h2>
+
+		<a data-scroll href="#overview-wrapper"><span class="ti-panel header-button grow"><span></a>
+		<a data-scroll href="#appA-wrapper"><span class="ti-stats-up header-button grow"><span></a>
+		<a data-scroll href="#about-wrapper"><span class="ti-user header-button grow"><span></a>
+		<a data-scroll href="#footer"><span class="ti-announcement header-button grow"><span></a>
+
+		<div style="padding-top:20px"> </div>
+		<span class="header-desc"><a data-scroll href="#overview-container">Overview</a></span>
+		<span class="header-desc"><a data-scroll href="#appA-wrapper">Appliances</a></span>
+		<span class="header-desc"><a data-scroll href="#about-wrapper">About</a></span>
+		<span class="header-desc"><a data-scroll href="#contact-wrapper">Contact</a></span>
+	</header>
+
+	<div class="box" id="overview-wrapper">
+		<div>
+		  <h1>
+		    <a data-scroll href="#header"><span class="ti-arrow-circle-up nav-button-up grow"></span></a>
+		      Overview
+		    <a data-scroll href="#appA-wrapper"><span class="ti-arrow-circle-down nav-button-down grow"><span></a>
+		  </h1>
+		</div>
+		<div class="content">
+			<p>
+			Your total, disaggregated power consumption over the last 4 hours.
+			<br>
+			<br>
+			Highest: {{ovw_max_val}}W - {{ovw_max_time}} hour(s) ago
+			<br>
+			<br>
+			Lowest: {{ovw_min_val}}W - {{ovw_min_time}} hour(s) ago
+			<br>
+			<br>
+			Average: {{ovw_avg_val}}W
+			</p>
+		</div>
+		<span class="legend-y">(W)</span>
+		<div class="chart"> <canvas id="overview-chart" width="500" height="500"></canvas> </div>
+		<div class="legend-x"><div class="legend-x-content">(h)</div></div>
+	</div>
+
+	<div class="box" id="appA-wrapper">
+		<div>
+			<h1>
+				<a data-scroll href="#overview-wrapper"><span class="ti-arrow-circle-up nav-button-up grow"><span></a>
+				Appliance A
+				<a data-scroll href="#appB-wrapper"><span class="ti-arrow-circle-down nav-button-down grow"><span></a>
+			</h1>
+		</div>
+		<div class="content">
+			<p>
+			The power consumption of appliance A over the last 4 hours.
+			<br>
+			<br>
+			Highest: {{appA_max_val}}W - {{appA_max_time}} hour(s) ago
+                        <br>
+                        <br>
+                        Lowest: {{appA_min_val}}W - {{appA_min_time}} hour(s) ago
+                        <br>
+                        <br>
+                        Average: {{appA_avg_val}}W
+			</p>
+		</div>
+		<span class="legend-y">(W)</span>
+		<div class="chart"> <canvas id="appA-chart" width="800" height="500"></canvas> </div>
+		<div class="legend-x"><div class="legend-x-content">(h)</div></div>
+	</div>
+
+	<div class="box" id="appB-wrapper">
+		<h1>
+			<a data-scroll href="#appA-wrapper"><span class="ti-arrow-circle-up nav-button-up grow"><span></a>
+			Appliance B
+			<a data-scroll href="#appC-wrapper"><span class="ti-arrow-circle-down nav-button-down grow"><span></a>
+		</h1>
+		<div class="content">
+			<p>
+                        The power consumption of appliance B over the last 4 hours.
+                        <br>
+                        <br>
+			Highest: {{appB_max_val}}W - {{appB_max_time}} hour(s) ago
+                        <br>
+                        <br>
+                        Lowest: {{appB_min_val}}W - {{appB_min_time}} hour(s) ago
+                        <br>
+                        <br>
+                        Average: {{appB_avg_val}}W
+                        </p>
+		</div>
+		<span class="legend-y">(W)</span>
+		<div class="chart"> <canvas id="appB-chart" width="800" height="500"></canvas> </div>
+		<div class="legend-x"><div class="legend-x-content">(h)</div></div>
+	</div>
+	<div class="box" id="about-wrapper">
+		<div>
+			<h1>
+				<a data-scroll href="#appB-wrapper"><span class="ti-arrow-circle-up nav-button-up grow"><span></a>
+				About
+				<a data-scroll href="#footer"><span class="ti-arrow-circle-down nav-button-down grow"><span></a>
+			</h1>
+		</div>
+		<div id="about-content">
+			I, Peter Goldsborough, created this website for my internship at the
+			Institute for Networked and Embedded Systems at the University of Klagenfurt
+			during the month of July 2014, where I worked on Non-intrusive Load Monitoring.
+		</div>
+	</div>
+
+	<footer class="box" id="footer">
+		<h1>
+			<a data-scroll href="#about-wrapper"><span class="ti-arrow-circle-up nav-button-up grow"><span></a>
+			Contact
+			<a data-scroll href="#header"><span class="ti-angle-double-up nav-button-down grow"><span></a>
+		</h1>
+		<div id="social-bar">
+			<a href="http://www.facebook.com/petergoldsborough" target="_blank">
+				<span class="ti-facebook social-button grow"><span>
+			</a>
+			<a href="http://github.com/goldsborough" target="_blank">
+				<span class="ti-github social-button grow"><span>
+			</a>
+			<a href="mailto:petergoldsborough@hotmail.com?Subject=Regarding%20your%20lasagna" target="_blank">
+				<span class="ti-email social-button grow"><span>
+			</a>
+			<a href="http://twitter.com/thecodeinn" target="_blank">
+				<span class="ti-twitter social-button grow"><span>
+			</a>
+			<a href="http://www.linkedin.com/in/petergoldsborough" target="_blank">
+				<span class="ti-linkedin social-button grow"><span>
+			</a>
+			<a href="http://www.thecodeinn.blogspot.com" target="_blank">
+				<span class="ti-marker-alt grow"><span>
+			</a>
+		</div>
+	</footer>
+
+	<span id="samples">{{samples}}</span>
+
+	<!-- The chart settings script -->
+	<script type="text/javascript" src="../static/js/chart-settings.js"></script>
+
+	</body>
+
+	<!-- Smooth scroll libary -->
+	<script src="../static/js/smooth-scroll.js"></script>
+	<script> smoothScroll.init(1000,'easeInOutQuad'); </script>
+
+</html>

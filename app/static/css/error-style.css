@@ -1,0 +1,29 @@
+@font-face
+{
+    font-family: "HelveticaNeue-Thin";
+    src: url("../rsc/HelveticaNeue-Thin.otf");
+    font-style:normal;
+    font-weight:normal;
+}
+
+body
+{
+    background-color: #49D0FF;
+    font-family: "HelveticaNeue-Thin", "Geneva", sans-serif;
+    color: #FFFFFF;
+
+    text-align: center;
+}
+
+div
+{
+    font-size:30em;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+span
+{ 
+   font-size: 10em; 
+   padding-bottom: 4%;
+}
